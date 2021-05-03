@@ -2,5 +2,6 @@
   <component name="Registry">
     <entry key="external.system.auto.import.disabled" value="true" />
     <entry key="ide.balloon.shadow.size" value="0" />
+    <entry key="ide.intellij.laf.enable.animation" value="true" />
   </component>
 </application>
