@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="pedra">Pedra</string>
+    <string name="escolha_computador">Escolha Computador</string>
+    <string name="vencedor_do_jogo">Vencedor do Jogo</string>
+    <string name="seja_bem_vindo_ao_junket">Seja Bem Vindo ao Junket</string>
+    <string name="papel">Papel</string>
+    <string name="tesoura">Tesoura</string>
+</resources>

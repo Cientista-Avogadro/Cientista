@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="k">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/purple_200</item>
+        <item name="android:overScrollMode">always</item>
+        <item name="android:visibility">visible</item>
+    </style>
+</resources>
