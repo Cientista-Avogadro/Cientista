@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C0C0C"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtnomes2"
+        android:layout_width="410dp"
+        android:layout_height="111dp"
+        android:background="#424344"
+        android:gravity="center"
+        android:text="Seja Bem vindo ao Ceforc"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="278dp"
+        android:layout_height="368dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.424">
+
+        <EditText
+            android:id="@+id/txtfirst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Insira o Primeiro nome"
+            android:inputType="textPersonName"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textColorHint="@color/design_default_color_primary_dark" />
+
+        <EditText
+            android:id="@+id/txtsecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Insira o Último nome"
+            android:inputType="textPersonName"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textColorHint="@color/purple_700" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="submit"
+            android:text="Submit" />
+
+        <TextView
+            android:id="@+id/txtnomes"
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            android:background="#494C4E"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

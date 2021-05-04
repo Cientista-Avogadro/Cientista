@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Exercicio1</string>
+    <string name="celsius_fahrenheit"><![CDATA[Celsius <=> Fahrenheit]]></string>
+    <string name="_0">0</string>
+    <string name="resultado">Resultado:</string>
+    <string name="insira_o_valor_em_c">Insira o valor em ºC</string>
+    <string name="conversor_de_temperatura">Conversor de Temperatura</string>
+</resources>

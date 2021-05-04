@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="insira_o_ano_de_nascimento">insira o ano de nascimento</string>
+    <string name="seja_bem_vindo_ao_ceforc">Seja Bem vindo ao Ceforc</string>
+    <string name="insira_o_ano_actual">insira o ano actual</string>
+    <string name="submit">Submit</string>
+    <string name="idade_da_pessoa">Idade da pessoa</string>
+    <string name="idade_em_2050">idade em 2050</string>
+</resources>
