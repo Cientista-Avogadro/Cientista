@@ -3,13 +3,18 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,17 +24,15 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void submit(View view){
-        EditText editText1= (EditText)findViewById(R.id.txtfirst);
-        EditText editText2= (EditText)findViewById(R.id.txtsecond);
 
-        String mensagem="Ola";
+            Intent intent = new Intent(this, MainActivity2.class);
 
-        if(editText1.getText().toString().isEmpty() || editText2.getText().toString().isEmpty() ){
-            Toast.makeText(getApplicationContext(),"Por favor insira um valor",Toast.LENGTH_SHORT).show();
-        }
-        else{
-            mensagem+=" " + editText1.getText() +" "+ editText2.getText();
-            Toast.makeText(getApplicationContext(),mensagem,Toast.LENGTH_SHORT).show();
-        }
+            intent.putExtra(EXTRA_MESSAGE, "Cientista");
+            startActivity(intent);
+
+    }
+
+    public void toasted(View view){
+        Toast.makeText(getApplicationContext(),"Botao clicacdo",Toast.LENGTH_SHORT).show();
     }
 }

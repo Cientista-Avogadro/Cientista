@@ -19,17 +19,24 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void submit(View view){
-        EditText editText1= (EditText)findViewById(R.id.txtfirst);
-        EditText editText2= (EditText)findViewById(R.id.txtsecond);
+        EditText Txtuser= (EditText)findViewById(R.id.txtuser);
+        EditText Txtpass= (EditText)findViewById(R.id.txtpass);
 
-        String mensagem="Ola";
 
-        if(editText1.getText().toString().isEmpty() || editText2.getText().toString().isEmpty() ){
-            Toast.makeText(getApplicationContext(),"Por favor insira um valor",Toast.LENGTH_SHORT).show();
+
+        if(Txtuser.getText().toString().isEmpty() || Txtpass.getText().toString().isEmpty() ){
+            Toast.makeText(getApplicationContext(),"Por favor Preencha os Campo",Toast.LENGTH_SHORT).show();
         }
         else{
-            mensagem+=" " + editText1.getText() +" "+ editText2.getText();
-            Toast.makeText(getApplicationContext(),mensagem,Toast.LENGTH_SHORT).show();
+           if(Txtuser.getText().toString().equals("user") || Txtuser.getText().toString().equals("User") || Txtuser.getText().toString().equals("USER") && Txtpass.getText().toString().equals("pass")){
+               Toast.makeText(getApplicationContext(),"Login Valido",Toast.LENGTH_SHORT).show();
+           }
+           else{
+               Toast.makeText(getApplicationContext(),"Login invalido",Toast.LENGTH_SHORT).show();
+               Txtuser.setText("");
+               Txtpass.setText("");
+           }
+
         }
     }
 }

@@ -19,17 +19,38 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void submit(View view){
-        EditText editText1= (EditText)findViewById(R.id.txtfirst);
-        EditText editText2= (EditText)findViewById(R.id.txtsecond);
+        //Edits
+        EditText prfabrica= (EditText)findViewById(R.id.prfabrica);
+        EditText prlucro= (EditText)findViewById(R.id.prlucro);
+        EditText primposto= (EditText)findViewById(R.id.primposto);
+        //TextViews
+        TextView v_impostos= (TextView)findViewById(R.id.impostos);
+        TextView v_lucro= (TextView)findViewById(R.id.lucro);
+        TextView p_final= (TextView)findViewById(R.id.prveiculofinal);
+        //var declarated
+       float preco_fabrica, percentual_lucro, percentual_imposto,
+               preco_final, valor_impostos , valor_lucro, preco_imposto;
+        //Convert Values
+       preco_fabrica=Float.parseFloat(prfabrica.getText().toString());
+        percentual_lucro=Float.parseFloat(prlucro.getText().toString());
+        percentual_imposto=Float.parseFloat(primposto.getText().toString());
 
-        String mensagem="Ola";
-
-        if(editText1.getText().toString().isEmpty() || editText2.getText().toString().isEmpty() ){
+        //Autentication dos inputs
+        if(prfabrica.getText().toString().isEmpty() || prlucro.getText().toString().isEmpty() || primposto.getText().toString().isEmpty() ){
             Toast.makeText(getApplicationContext(),"Por favor insira um valor",Toast.LENGTH_SHORT).show();
         }
         else{
-            mensagem+=" " + editText1.getText() +" "+ editText2.getText();
-            Toast.makeText(getApplicationContext(),mensagem,Toast.LENGTH_SHORT).show();
+            //Caçlcular os valores
+            valor_impostos = preco_fabrica * percentual_lucro /100;
+            valor_lucro = preco_fabrica * percentual_imposto /100;
+            preco_final = preco_fabrica + valor_impostos + valor_lucro;
+
+            //Apresentar os valores
+            v_impostos.setText(String.valueOf(valor_impostos));
+            v_lucro.setText(String.valueOf(valor_lucro));
+            p_final.setText(String.valueOf(preco_final));
         }
+
+
     }
 }

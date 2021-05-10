@@ -23,32 +23,41 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="275dp"
-        android:layout_height="169dp"
+        android:layout_width="329dp"
+        android:layout_height="346dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424">
+        app:layout_constraintVertical_bias="0.6">
 
         <EditText
-            android:id="@+id/txtfirst"
+            android:id="@+id/prfabrica"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Insira o Primeiro nome"
+            android:hint="Digite o preço de Fabrica do seu automovel"
             android:inputType="textPersonName"
             android:textColor="@color/design_default_color_on_primary"
             android:textColorHint="@color/design_default_color_primary_dark" />
 
         <EditText
-            android:id="@+id/txtsecond"
+            android:id="@+id/prlucro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Insira o Último nome"
+            android:hint="Digite o percentual de lucro"
+            android:inputType="textPersonName"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textColorHint="@color/purple_700" />
+
+        <EditText
+            android:id="@+id/primposto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Digite o percentual de imposto"
             android:inputType="textPersonName"
             android:textColor="@color/design_default_color_on_primary"
             android:textColorHint="@color/purple_700" />
@@ -59,6 +68,51 @@
             android:layout_height="wrap_content"
             android:onClick="submit"
             android:text="Submit" />
+
+        <TextView
+            android:id="@+id/lucro"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="#424344"
+            android:gravity="center"
+            android:hint="lucro do distribuidor"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textColorHint="@color/purple_700"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/impostos"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="#424344"
+            android:gravity="center"
+            android:hint="impostos"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textColorHint="@color/purple_700"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/prveiculofinal"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="#424344"
+            android:gravity="center"
+            android:hint="preço final do veículo"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textColorHint="@color/purple_700"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

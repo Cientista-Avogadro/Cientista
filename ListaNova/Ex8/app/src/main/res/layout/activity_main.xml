@@ -7,58 +7,78 @@
     android:background="#0C0C0C"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtnomes2"
-        android:layout_width="410dp"
-        android:layout_height="111dp"
-        android:background="#424344"
-        android:gravity="center"
-        android:text="Seja Bem vindo ao Ceforc"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="275dp"
-        android:layout_height="169dp"
+        android:layout_width="376dp"
+        android:layout_height="356dp"
+        android:background="#FBFBFB"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424">
+        app:layout_constraintVertical_bias="0.529">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center|center_horizontal"
+            android:text="Conversor de Moedas"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/txtfirst"
+            android:id="@+id/txteuro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_blue_light"
             android:ems="10"
-            android:hint="Insira o Primeiro nome"
-            android:inputType="textPersonName"
-            android:textColor="@color/design_default_color_on_primary"
-            android:textColorHint="@color/design_default_color_primary_dark" />
-
-        <EditText
-            android:id="@+id/txtsecond"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Insira o Último nome"
-            android:inputType="textPersonName"
-            android:textColor="@color/design_default_color_on_primary"
-            android:textColorHint="@color/purple_700" />
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:hint="Insira um valor em Euros"
+            android:inputType="number"
+            android:textColor="#00BCD4" />
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
+            android:id="@+id/btnkwanza"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="submit"
-            android:text="Submit" />
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="Kwanza"
+            android:text="Kwanza" />
 
+        <Button
+            android:id="@+id/btnreal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-49dp"
+            android:onClick="Real"
+            android:text="Real" />
+
+        <Button
+            android:id="@+id/btndolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="280dp"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="-49dp"
+            android:onClick="Dolar"
+            android:text="Dolar" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="70dp"
+            android:gravity="center|center_horizontal"
+            android:text="Desenvolvido por Cientista"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

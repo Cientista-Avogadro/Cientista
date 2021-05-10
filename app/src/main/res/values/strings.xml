@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Pedra Papel e Tesoura</string>
     <string name="pedra">Pedra</string>
     <string name="escolha_computador">Escolha Computador</string>
     <string name="vencedor_do_jogo">Vencedor do Jogo</string>

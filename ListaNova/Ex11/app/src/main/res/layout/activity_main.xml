@@ -9,46 +9,47 @@
 
     <TextView
         android:id="@+id/txtnomes2"
-        android:layout_width="410dp"
-        android:layout_height="111dp"
+        android:layout_width="386dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="40dp"
         android:background="#424344"
         android:gravity="center"
         android:text="Seja Bem vindo ao Ceforc"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="275dp"
-        android:layout_height="169dp"
+        android:layout_width="286dp"
+        android:layout_height="332dp"
+        android:layout_marginTop="368dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424">
+        app:layout_constraintVertical_bias="1.0">
 
         <EditText
-            android:id="@+id/txtfirst"
+            android:id="@+id/tSalario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Insira o Primeiro nome"
+            android:hint="Salario Minimo"
             android:inputType="textPersonName"
             android:textColor="@color/design_default_color_on_primary"
             android:textColorHint="@color/design_default_color_primary_dark" />
 
         <EditText
-            android:id="@+id/txtsecond"
+            android:id="@+id/tQtd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Insira o Último nome"
+            android:hint="Quantidade"
             android:inputType="textPersonName"
             android:textColor="@color/design_default_color_on_primary"
             android:textColorHint="@color/purple_700" />
@@ -58,7 +59,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="submit"
-            android:text="Submit" />
+            android:text="Calcular" />
+
+        <TextView
+            android:id="@+id/vKilo"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:hint="Valor Kilowatts"
+            android:textColor="#CF3200"
+            android:textColorHint="#925BF3" />
+
+        <TextView
+            android:id="@+id/vPago"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:hint="Valor a ser pago"
+            android:textColor="#CF3200"
+            android:textColorHint="#925BF3" />
+
+        <TextView
+            android:id="@+id/vDesconto"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:hint="Valor descontado"
+            android:textColor="#CF3200"
+            android:textColorHint="#925BF3" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

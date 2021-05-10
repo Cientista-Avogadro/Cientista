@@ -17,19 +17,36 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    @SuppressLint("SetTextI18n")
-    public void submit(View view){
-        EditText editText1= (EditText)findViewById(R.id.txtfirst);
-        EditText editText2= (EditText)findViewById(R.id.txtsecond);
 
-        String mensagem="Ola";
+        public void Kwanza (View view){
+            EditText editText1 = (EditText) findViewById(R.id.txteuro);
+            float kwanza;
+            if (editText1.getText().toString().isEmpty()) {
+                Toast.makeText(getApplicationContext(), "Por favor insira um valor", Toast.LENGTH_SHORT).show();
+            } else {
+                kwanza=Float.parseFloat(editText1.getText().toString()) * 795.43f;
+                Toast.makeText(getApplicationContext(), String.valueOf(kwanza), Toast.LENGTH_SHORT).show();
+            }
+        }
+        public void Real (View view){
+            EditText editText1 = (EditText) findViewById(R.id.txteuro);
+            float real;
+            if (editText1.getText().toString().isEmpty()) {
+                Toast.makeText(getApplicationContext(), "Por favor insira um valor", Toast.LENGTH_SHORT).show();
+            } else {
+                real=Float.parseFloat(editText1.getText().toString()) * 6.37f;
+                Toast.makeText(getApplicationContext(), String.valueOf(real), Toast.LENGTH_SHORT).show();
+            }
+        }
+        public void Dolar (View view){
+            EditText editText1 = (EditText) findViewById(R.id.txteuro);
+            float dolar;
+            if (editText1.getText().toString().isEmpty()) {
+                Toast.makeText(getApplicationContext(), "Por favor insira um valor", Toast.LENGTH_SHORT).show();
+            } else {
+                dolar=Float.parseFloat(editText1.getText().toString()) * 1.22f;
+                Toast.makeText(getApplicationContext(),String.valueOf(dolar), Toast.LENGTH_SHORT).show();
+            }
+        }
 
-        if(editText1.getText().toString().isEmpty() || editText2.getText().toString().isEmpty() ){
-            Toast.makeText(getApplicationContext(),"Por favor insira um valor",Toast.LENGTH_SHORT).show();
-        }
-        else{
-            mensagem+=" " + editText1.getText() +" "+ editText2.getText();
-            Toast.makeText(getApplicationContext(),mensagem,Toast.LENGTH_SHORT).show();
-        }
-    }
 }

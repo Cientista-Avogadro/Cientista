@@ -19,17 +19,27 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void submit(View view){
-        EditText editText1= (EditText)findViewById(R.id.txtfirst);
-        EditText editText2= (EditText)findViewById(R.id.txtsecond);
+        EditText Tsalario= (EditText)findViewById(R.id.tSalario);
+        EditText Tqtd= (EditText)findViewById(R.id.tQtd);
+        TextView valorkilo=(TextView)findViewById(R.id.vKilo);
+        TextView valorPago=(TextView)findViewById(R.id.vPago);
+        TextView valorDesc=(TextView)findViewById(R.id.vDesconto);
+        float  salmin, qtdconsu, valorpkw, valortotal,desc;
 
-        String mensagem="Ola";
-
-        if(editText1.getText().toString().isEmpty() || editText2.getText().toString().isEmpty() ){
+        if(Tsalario.getText().toString().isEmpty() || Tqtd.getText().toString().isEmpty() ){
             Toast.makeText(getApplicationContext(),"Por favor insira um valor",Toast.LENGTH_SHORT).show();
         }
-        else{
-            mensagem+=" " + editText1.getText() +" "+ editText2.getText();
-            Toast.makeText(getApplicationContext(),mensagem,Toast.LENGTH_SHORT).show();
+        else {
+            salmin=Float.valueOf(Tsalario.getText().toString());
+            qtdconsu=Float.valueOf(Tqtd.getText().toString());
+
+            valorpkw = salmin/5;
+            valortotal = valorpkw * qtdconsu;
+            desc = valortotal - (valortotal * 15)/100;
+
+            valorkilo.setText(String.valueOf(valorpkw));
+            valorPago.setText(String.valueOf(valortotal));
+            valorDesc.setText(String.valueOf(desc));
         }
     }
 }
