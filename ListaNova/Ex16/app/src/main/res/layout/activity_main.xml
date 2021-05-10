@@ -38,20 +38,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Insira o Primeiro nome"
+            android:hint="Username"
             android:inputType="textPersonName"
             android:textColor="@color/design_default_color_on_primary"
             android:textColorHint="@color/design_default_color_primary_dark" />
 
         <EditText
-            android:id="@+id/txtsecond"
+            android:id="@+id/editTextTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Insira o Último nome"
-            android:inputType="textPersonName"
-            android:textColor="@color/design_default_color_on_primary"
-            android:textColorHint="@color/purple_700" />
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="#3F51B5" />
 
         <Button
             android:id="@+id/button"
