@@ -13,7 +13,7 @@
         android:layout_height="111dp"
         android:background="#424344"
         android:gravity="center"
-        android:text="Seja Bem vindo ao Ceforc"
+        android:text="Num primo"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
@@ -38,20 +38,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Insira o Primeiro nome"
+            android:hint="Insira o  numero"
             android:inputType="textPersonName"
             android:textColor="@color/design_default_color_on_primary"
             android:textColorHint="@color/design_default_color_primary_dark" />
-
-        <EditText
-            android:id="@+id/txtsecond"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Insira o Último nome"
-            android:inputType="textPersonName"
-            android:textColor="@color/design_default_color_on_primary"
-            android:textColorHint="@color/purple_700" />
 
         <Button
             android:id="@+id/button"
@@ -59,6 +49,19 @@
             android:layout_height="wrap_content"
             android:onClick="submit"
             android:text="Submit" />
+
+        <TextView
+            android:id="@+id/txtnomes"
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:background="#424344"
+            android:gravity="center"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

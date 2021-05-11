@@ -16,20 +16,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
     @SuppressLint("SetTextI18n")
     public void submit(View view){
         EditText editText1= (EditText)findViewById(R.id.txtfirst);
-        EditText editText2= (EditText)findViewById(R.id.txtsecond);
+        TextView TextView1= (TextView)findViewById(R.id.txtnomes);
+        int number=Integer.parseInt(editText1.getText().toString());
 
-        String mensagem="Ola";
-
-        if(editText1.getText().toString().isEmpty() || editText2.getText().toString().isEmpty() ){
+        if(editText1.getText().toString().isEmpty()){
             Toast.makeText(getApplicationContext(),"Por favor insira um valor",Toast.LENGTH_SHORT).show();
         }
         else{
-            mensagem+=" " + editText1.getText() +" "+ editText2.getText();
-            Toast.makeText(getApplicationContext(),mensagem,Toast.LENGTH_SHORT).show();
+           if(ehPrimo(number)==true){
+               TextView1.setText("O numero e primo");
+           }
+           else{
+               TextView1.setText("O numero nao e primo");
+           }
         }
+    }
+    public  boolean ehPrimo(int numero) {
+        for (int j = 2; j < numero; j++) {
+            if (numero % j == 0)
+                return false;
+        }
+        return true;
     }
 }
